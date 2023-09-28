@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Amazing Results With Limited Data In Multi-Class Product Counting and Recegnition.
 ===
 
@@ -109,3 +110,6 @@ python tools/test_net.py --input_folder ./frames --out_file ./results.txt --dete
 # Contact
 
 If you have any questions, feel free to contact Junfeng Wan (wanjunfeng@bupt.edu.cn).
+=======
+# DTC_AICITY2022
+>>>>>>> 0bec07fb8327e3ce40fe7693ad6748adfdcd3eba
