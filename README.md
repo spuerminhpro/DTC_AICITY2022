@@ -59,12 +59,49 @@ test_videos/
 * tensorflow-gpu 1.15.0
 
 ```shell
-1. conda create -n DTC python=3.7
-2. conda activate DTC
-3. git clone https://github.com/w-sugar/DTC_AICITY2022
-4. cd DTC_AICITY2022
-5. pip install -r requirements.txt
-6. sh ./tools/setup.sh
+1. Write following code on Anaconda Prompt:
+
+conda create -n DTC python=3.7
+
+conda activate DTC
+
+git clone https://github.com/w-sugar/DTC_AICITY2022
+
+cd DTC_AICITY2022
+
+!conda install pytorch==1.10.1+cu102 torchvision==0.11.2+cu102 torchaudio==0.10.1+cu102 -c pytorch 
+
+conda install cudatoolkit=10.2 -c pytorch
+
+pip install -U openmim
+
+mim install mmcv-full==1.4.3
+
+p/s: leave anaconda prompt open
+
+2. Open requirements.txt in repo root directory
+
+Delete following lines and save: mmcv-full==1.4.3
+
+torch==1.10.1+cu102
+
+torchaudio==0.10.1+rocm4.1
+
+torchvision==0.11.2+cu102
+
+3. Write following code on Anaconda Prompt:
+
+pip install -r requirements.txt
+
+cd mmdetection
+
+python setup.py build develop
+
+cd ../mmclassification
+
+python setup.py build develop
+
+cd ..
 ```
 Prepare train&test data by following [here](#data-preparing)
 
